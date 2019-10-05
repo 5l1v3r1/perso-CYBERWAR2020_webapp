@@ -16,7 +16,7 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 * Django server in dir 'Web' parametrized and ready to use! PULL GIT ASAP (ask Ben for more info)
 
 * Master branch must stay clean. If you want to develop or fix some issue, create a new dedicated branch.  
-/!/ (BEN) fix arg passing btw 'confirmnewid' and 'connections'
+
 ## [OUTLINE](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/Outline.pdf)
 
 * Pages skeleton: [sketch of pages skeleton](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/sketchPagesSkeleton.pdf)
@@ -40,9 +40,6 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 ### Benjamin
 
-* Multiple entry with same name if refreshing from 'confirmnewid' page. Should redirect to 'Connected'. (Ben)
-
-* Create session for a user to connect and save ID, NAME, FIRSTNAME (Ben)
 
 ### Quentin
 
