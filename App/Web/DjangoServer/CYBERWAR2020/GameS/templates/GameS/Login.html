@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CYBERWAR2020</title>
+    </head>
+
+    <body>
+      <h1> Login </h1>
+
+        <form action="{% url 'GameS:connection' %}" method="post">
+          {% csrf_token %}
+          <p>
+            <label>NOM</label>
+            <input type="text" name="name" id="name" />
+          </p>
+
+          <p>
+            <label>PRENOM</label>
+            <input type="text" name="firstName" id="firstName" />
+          </p>
+
+          <p>
+          <input type="submit" value="Envoyer" />
+          </p>
+        </form>
+
+    </body>
+</html>
