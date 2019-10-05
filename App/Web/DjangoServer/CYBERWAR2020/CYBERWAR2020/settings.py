@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC' #which str to change to UTC+2?
+TIME_ZONE = 'CET' #which str to change to UTC+2?
 
 USE_I18N = True
 
