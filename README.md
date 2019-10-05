@@ -4,7 +4,7 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 ## TECHNOLOGIES
 - Server: [Django 2.2.6](https://docs.djangoproject.com/en/2.2/intro/tutorial01/)
-- HTTP Server embded to Django(API available)
+- HTTP Server embded to Django (API available)
 - default DB embded to Django: [SQLite](https://sqlite.org/index.html)
 - Server side language (except if embded in Django?): [Node.js](https://www.hongkiat.com/blog/node-js-server-side-javascript/)
 
