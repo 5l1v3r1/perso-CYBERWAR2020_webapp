@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import redirect
 from django.template import loader
 
 from .models import Player
@@ -11,18 +12,31 @@ def index(request):
     return HttpResponse("c'est une bonne idée!")
 
 def login(request):
+    # flush cookies and sess vars from last connected
+    request.session.flush()
     return render(request, 'GameS/Login.html')
 
-def connection(request):
-    nomJ = request.POST.get("name", "")
-    prenomJ = request.POST.get("firstName", "")
+def connections(request):
+
+    if 'name' not in request.session:
+        nomJ = request.POST.get("name", "")
+        prenomJ = request.POST.get("firstName", "")
+
+    else:
+        nomJ = request.session['name']
+        prenomJ = request.session['firstName']
 
     PlInDB = Player.objects.filter(name = nomJ).filter(firstName = prenomJ).count()
 
     #if player in DB, connection and retrieve IDplayer from DB.
     if(PlInDB != 0):
         id = Player.objects.get(name = nomJ, firstName = prenomJ).idPlayer
-        return render(request, 'GameS/Connected.html',  {'idPlayer': id, 'name': nomJ, 'firstName': prenomJ})
+        request.session['name'] = nomJ
+        request.session['firstName'] = prenomJ
+        request.session['idPlayer'] = id
+
+        return render(request, 'GameS/Connected.html')
+
     #if not, return a page to confirm creation new IDplayer. change to JS?
     else:
         return render(request, 'GameS/ConfirmNewID.html', {'name': nomJ, 'firstName': prenomJ})
@@ -34,5 +48,8 @@ def confirmnewid(request):
     newPlID = Player.objects.count() + 1
     Player(idPlayer= newPlID, name = nomJ, firstName = prenomJ).save()
 
-    PlInDB = Player.objects.filter(name = nomJ).filter(firstName = prenomJ)
-    return render(request, 'GameS/Connected.html', {'idPlayer': newPlID, 'name': nomJ, 'firstName': prenomJ})
+    request.session['name'] = nomJ
+    request.session['firstName'] = prenomJ
+    request.session['idPlayer'] = newPlID
+
+    return redirect("GameS:connections")

@@ -15,13 +15,15 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 * Django server in dir 'Web' parametrized and ready to use! PULL GIT ASAP (ask Ben for more info)
 
+* Master branch must stay clean. If you want to develop or fix some issue, create a new dedicated branch.  
+
 ## [OUTLINE](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/Outline.pdf)
 
 * Pages skeleton: [sketch of pages skeleton](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/sketchPagesSkeleton.pdf)
 
 * Pages design (Ben)
 
-* App Server: games saloon, DB buffers (Thib)
+* App Server: games saloon, DB buffers (finaly maybe not useful - Ben) (Thib)
 
 * DB design (Ben): [sketch of DB tables](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/sketchTableDB.pdf)
 
@@ -35,14 +37,9 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 ### GENERAL
 
-* Quelle SGBD utiliser? SQLite? pas limité accès depuis DB buffer? (->QUENTIN/THIB)  
-/!/ server django default DBGS is SQLite (seems good to me - Ben) (to close)
 
 ### Benjamin
 
-* Multiple entry with same name if refreshing from 'confirmnewid' page. Should redirect to 'Connected'. (Ben)
-
-* Create session for a user to connect and save ID, NAME, FIRSTNAME (Ben)
 
 ### Quentin
 
