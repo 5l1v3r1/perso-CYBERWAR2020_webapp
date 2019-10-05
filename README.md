@@ -26,5 +26,5 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 ## ISSUES
 
-* Quelle SGBD utiliser? SQLite? pas limité accès depuis DB buffer? (->QUENTIN/THIB)
+* Quelle SGBD utiliser? SQLite? pas limité accès depuis DB buffer? (->QUENTIN/THIB)  
 /!/ server django default DBGS is SQLite (seems good to me - Ben) (to close)
