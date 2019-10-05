@@ -6,6 +6,130 @@
     </head>
 
     <body>
-      
+      <h1>Tour de jeu:</h1>
+      <form action = ="{% url 'GameS:login' %}" method="post">
+        <h2>Pioche</h2>
+          <h3>Carte choisie</h3>
+
+            <label for="développement">Développement</label><br />
+            <select name="développement" id="développementC">
+              <option value="Ferme de serveurs">Ferme de serveurs</option>
+              <option value="Pare-feu">Pare-feu</option>
+              <option value="BotNet">BotNet</option>
+              <option value="Bug Bounty">Bug Bounty</option>
+              <option value="DOS to DDOS">DOS to DDOS</option>
+            </select>
+            <br />
+            <label for="hackers">Hackers</label><br />
+            <select name="hackers" id="hackersC">
+              <option value="Affaiblissement">Affaiblissement</option>
+              <option value="Vulnérabilité">Vulnérabilité</option>
+              <option value="Déni de service">Déni de service</option>
+              <option value="Worm">Worm</option>
+              <option value="Fishing">Fishing</option>
+            </select>
+            <br />
+            <label for="économie">Economie</label><br />
+            <select name="économie" id="économieC">
+              <option value="Corruption de données">Corruption de données</option>
+              <option value="Récupération de données">Récupération de données</option>
+              <option value="Ransomware">Ransomware</option>
+              <option value="Crash boursier">Crash boursier</option>
+              <option value="Manipulation de fonds banquaire">Manipulation de fonds banquaire</option>
+
+            </select>
+            <br />
+            <label for="politique">Politique</label><br />
+            <select name="politique" id="politiqueC">
+              <option value="Fake news">Fake news</option>
+              <option value="Manipulation des réseaux sociaux">Manipulation des réseaux sociaux</option>
+              <option value="Data leak">Data leak</option>
+              <option value="Piratage de sites gouvernementaux">Piratage de sites gouvernementaux</option>
+              <option value="Trucage des élections">Trucage des élections</option>
+            </select>
+
+          <h3>Carte défaussée</h3>
+
+            <label for="développement">Développement</label><br />
+            <select name="développement" id="développementD">
+              <option value="Ferme de serveurs">Ferme de serveurs</option>
+              <option value="Pare-feu">Pare-feu</option>
+              <option value="BotNet">BotNet</option>
+              <option value="Bug Bounty">Bug Bounty</option>
+              <option value="DOS to DDOS">DOS to DDOS</option>
+            </select>
+            <br />
+            <label for="hackers">Hackers</label><br />
+            <select name="hackers" id="hackersD">
+              <option value="Affaiblissement">Affaiblissement</option>
+              <option value="Vulnérabilité">Vulnérabilité</option>
+              <option value="Déni de service">Déni de service</option>
+              <option value="Worm">Worm</option>
+              <option value="Fishing">Fishing</option>
+            </select>
+            <br />
+            <label for="économie">Economie</label><br />
+            <select name="économie" id="économieD">
+              <option value="Corruption de données">Corruption de données</option>
+              <option value="Récupération de données">Récupération de données</option>
+              <option value="Ransomware">Ransomware</option>
+              <option value="Crash boursier">Crash boursier</option>
+              <option value="Manipulation de fonds banquaire">Manipulation de fonds banquaire</option>
+
+            </select>
+            <br />
+            <label for="politique">Politique</label><br />
+            <select name="politique" id="politiqueD">
+              <option value="Fake news">Fake news</option>
+              <option value="Manipulation des réseaux sociaux">Manipulation des réseaux sociaux</option>
+              <option value="Data leak">Data leak</option>
+              <option value="Piratage de sites gouvernementaux">Piratage de sites gouvernementaux</option>
+              <option value="Trucage des élections">Trucage des élections</option>
+            </select>
+
+          <h3>Carte remise</h3>
+
+            <label for="développement">Développement</label><br />
+            <select name="développement" id="développementR">
+              <option value="Ferme de serveurs">Ferme de serveurs</option>
+              <option value="Pare-feu">Pare-feu</option>
+              <option value="BotNet">BotNet</option>
+              <option value="Bug Bounty">Bug Bounty</option>
+              <option value="DOS to DDOS">DOS to DDOS</option>
+            </select>
+            <br />
+            <label for="hackers">Hackers</label><br />
+            <select name="hackers" id="hackersR">
+              <option value="Affaiblissement">Affaiblissement</option>
+              <option value="Vulnérabilité">Vulnérabilité</option>
+              <option value="Déni de service">Déni de service</option>
+              <option value="Worm">Worm</option>
+              <option value="Fishing">Fishing</option>
+            </select>
+            <br />
+            <label for="économie">Economie</label><br />
+            <select name="économie" id="économieR">
+              <option value="Corruption de données">Corruption de données</option>
+              <option value="Récupération de données">Récupération de données</option>
+              <option value="Ransomware">Ransomware</option>
+              <option value="Crash boursier">Crash boursier</option>
+              <option value="Manipulation de fonds banquaire">Manipulation de fonds banquaire</option>
+
+            </select>
+            <br />
+            <label for="politique">Politique</label><br />
+            <select name="politique" id="politiqueR">
+              <option value="Fake news">Fake news</option>
+              <option value="Manipulation des réseaux sociaux">Manipulation des réseaux sociaux</option>
+              <option value="Data leak">Data leak</option>
+              <option value="Piratage de sites gouvernementaux">Piratage de sites gouvernementaux</option>
+              <option value="Trucage des élections">Trucage des élections</option>
+            </select>
+
+        <h2>Cartes posées</h2>
+
+        <h2>Nouveau "Centre de développement"</h2>
+
+      </form>
     </body>
 </html>

@@ -9,13 +9,16 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 - Server side language embded in Django I think but can't find the default used.  
   To keep in mind: [Node.js](https://www.hongkiat.com/blog/node-js-server-side-javascript/)
 
-## IMPORTANT UPDATES
+## IMPORTANT REMARKS
 * CHECK README.md before developping!!
 
+* Master branch must stay clean. If you want to develop or fix some issue, create a new dedicated branch.
 
+* If you looking for something to develop/solve, ctrl+f your name in files.
+
+## IMPORTANT UPDATES
 * Django server in dir 'Web' parametrized and ready to use! PULL GIT ASAP (ask Ben for more info)
 
-* Master branch must stay clean. If you want to develop or fix some issue, create a new dedicated branch.  
 
 ## [OUTLINE](https://gitlab.montefiore.ulg.ac.be/Benjamin/cyberwar2020_webapp/blob/master/PDF/Outline.pdf)
 

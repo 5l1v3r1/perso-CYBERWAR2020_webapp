@@ -9,7 +9,7 @@ from .models import Game
 # Create your views here.
 
 def index(request):
-    return HttpResponse("c'est une bonne idée!")
+    return redirect("GameS:login")
 
 def login(request):
     # flush cookies and sess vars from last connected
@@ -53,3 +53,12 @@ def confirmnewid(request):
     request.session['idPlayer'] = newPlID
 
     return redirect("GameS:connections")
+
+def toactifp(request):
+    return render(request, 'GameS/ActifPlayer.html')
+
+#(QUENTIN)
+#def processturn(request):
+    #Retrieve data from turn form received
+        # DATA RECEIVED: Carte choisie, Carte défaussée, carte remise, carte(s) jouée(s) et nouveau CD
+    #And push them into DB
