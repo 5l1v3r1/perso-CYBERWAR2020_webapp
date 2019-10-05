@@ -32,7 +32,19 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 ## ISSUES
 
+### GENERAL
+
 * Quelle SGBD utiliser? SQLite? pas limité accès depuis DB buffer? (->QUENTIN/THIB)  
 /!/ server django default DBGS is SQLite (seems good to me - Ben) (to close)
 
-* Multiple entry with same name if refreshing from 'confirmnewid' page. Should redirect to 'Connected'.
+### Benjamin
+
+* Multiple entry with same name if refreshing from 'confirmnewid' page. Should redirect to 'Connected'. (Ben)
+
+* Create session for a user to connect and save ID, NAME, FIRSTNAME (Ben)
+
+### Quentin
+
+### Thibault
+
+### Thomas
