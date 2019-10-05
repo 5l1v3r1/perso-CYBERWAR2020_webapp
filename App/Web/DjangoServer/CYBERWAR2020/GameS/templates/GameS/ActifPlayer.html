@@ -128,8 +128,49 @@
 
         <h2>Cartes posées</h2>
 
-        <h2>Nouveau "Centre de développement"</h2>
+          <label for="développement">Développement</label><br />
+          <select name="développement" id="développementP">
+            <option value="Ferme de serveurs">Ferme de serveurs</option>
+            <option value="Pare-feu">Pare-feu</option>
+            <option value="BotNet">BotNet</option>
+            <option value="Bug Bounty">Bug Bounty</option>
+            <option value="DOS to DDOS">DOS to DDOS</option>
+          </select>
+          <br />
+          <label for="hackers">Hackers</label><br />
+          <select name="hackers" id="hackersP">
+            <option value="Affaiblissement">Affaiblissement</option>
+            <option value="Vulnérabilité">Vulnérabilité</option>
+            <option value="Déni de service">Déni de service</option>
+            <option value="Worm">Worm</option>
+            <option value="Fishing">Fishing</option>
+          </select>
+          <br />
+          <label for="économie">Economie</label><br />
+          <select name="économie" id="économieP">
+            <option value="Corruption de données">Corruption de données</option>
+            <option value="Récupération de données">Récupération de données</option>
+            <option value="Ransomware">Ransomware</option>
+            <option value="Crash boursier">Crash boursier</option>
+            <option value="Manipulation de fonds banquaire">Manipulation de fonds banquaire</option>
 
+          </select>
+          <br />
+          <label for="politique">Politique</label><br />
+          <select name="politique" id="politiqueP">
+            <option value="Fake news">Fake news</option>
+            <option value="Manipulation des réseaux sociaux">Manipulation des réseaux sociaux</option>
+            <option value="Data leak">Data leak</option>
+            <option value="Piratage de sites gouvernementaux">Piratage de sites gouvernementaux</option>
+            <option value="Trucage des élections">Trucage des élections</option>
+          </select>
+
+        <h2>Nouveau "Centre de développement"</h2>
+          <input type="radio" name="CD" value="oui" id="ouiCD" /> <label for="ouiCD">oui</label><br />
+          <input type="radio" name="CD" value="non" id="nonCD" /> <label for="nonCD">non</label><br />
+
+        <input type="submit" value="Passez au tour suivant!">
       </form>
+
     </body>
 </html>
