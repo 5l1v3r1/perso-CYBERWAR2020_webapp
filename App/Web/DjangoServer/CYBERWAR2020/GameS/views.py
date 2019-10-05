@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import redirect
 from django.template import loader
 
 from .models import Player
@@ -13,9 +14,10 @@ def index(request):
 def login(request):
     return render(request, 'GameS/Login.html')
 
-def connection(request):
-    nomJ = request.POST.get("name", "")
-    prenomJ = request.POST.get("firstName", "")
+def connections(request, nomJ = None, prenomJ = None):
+    if not nomJ or prenomJ:
+        nomJ = request.POST.get("name", "")
+        prenomJ = request.POST.get("firstName", "")
 
     PlInDB = Player.objects.filter(name = nomJ).filter(firstName = prenomJ).count()
 
@@ -28,11 +30,10 @@ def connection(request):
         return render(request, 'GameS/ConfirmNewID.html', {'name': nomJ, 'firstName': prenomJ})
 
 def confirmnewid(request):
-    nomJ = request.POST.get("name", "")
-    prenomJ = request.POST.get("firstName", "")
+    nJ = request.POST.get("name", "")
+    pJ = request.POST.get("firstName", "")
 
     newPlID = Player.objects.count() + 1
-    Player(idPlayer= newPlID, name = nomJ, firstName = prenomJ).save()
+    Player(idPlayer= newPlID, name = nJ, firstName = pJ).save()
 
-    PlInDB = Player.objects.filter(name = nomJ).filter(firstName = prenomJ)
-    return render(request, 'GameS/Connected.html', {'idPlayer': newPlID, 'name': nomJ, 'firstName': prenomJ})
+    return redirect("GameS:connections", nomJ = nJ, prenomJ = pJ)

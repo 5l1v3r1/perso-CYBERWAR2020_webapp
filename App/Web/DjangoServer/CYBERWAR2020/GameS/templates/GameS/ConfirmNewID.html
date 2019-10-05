@@ -9,7 +9,7 @@
       <h1> CREATE NEW PLAYER ID </h1>
       <p>
         {{name}} {{firstName}} n'a pas été trouvé dans notre base de données.. </br>
-        Etes vous sûr de vouloir creer un nouvel ID?
+        Etes vous sûr de vouloir creer un nouvel ID à {{name}} {{firstName}}?
       </p>
 
       <form action="{% url 'GameS:confirmnewid' %}" method= "post">
@@ -19,6 +19,6 @@
 
         <input type="submit" value="Confirmer!">
       </form>
-      
+
     </body>
 </html>
