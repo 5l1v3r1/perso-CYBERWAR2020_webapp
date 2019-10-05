@@ -6,12 +6,16 @@
 
     <body>
       <header>
-        <p>#{{idPlayer}} {{name}} {{firstName}}</p>
+
+        <p>
+          {% csrf_token %}
+          #{{request.session.idPlayer}} {{request.session.name}} {{request.session.firstName}}
+        </p>
       </header>
 
       <h1> Parties en cours </h1>
       <h1> Creer une partie </h1>
-      
+
     </body>
 
 </html>
