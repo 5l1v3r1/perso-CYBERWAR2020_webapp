@@ -1,5 +1,4 @@
 App/Web/DjangoServer/CYBERWAR2020/.idea
-App/Web/DjangoServer/CYBERWAR2020/CYBERWAR2020/__pycache__/*
-App/Web/DjangoServer/CYBERWAR2020/GameS/__pycache__/__init__.cpython-37.pyc
 *.pyc
 *.sqlite3
+
