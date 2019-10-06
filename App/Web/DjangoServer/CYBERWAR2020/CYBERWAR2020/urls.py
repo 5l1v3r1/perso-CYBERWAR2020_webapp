@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
+
 
 urlpatterns = [
-    path('Games/', include('GameS.urls')),
+    #add redirect
+    path('', views.index, name="empty"),
+    path('login/', include('login.urls')),
+    path('Game/', include('GameS.urls')),
     path('admin/', admin.site.urls),
 ]
