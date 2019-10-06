@@ -7,6 +7,8 @@ from django.urls import reverse
 from django.views import generic
 from django.http import HttpResponse
 from .models import Player
+from django.shortcuts import redirect
+
 
 def index(request):
     # flush cookies and sess vars from last connected
@@ -38,3 +40,17 @@ def connections(request):
     #if not, return a page to confirm creation new IDplayer. change to JS?
     else:
         return render(request, 'login/ConfirmNewID.html', {'name': nomJ, 'firstName': prenomJ})
+
+
+def confirmnewid(request):
+    nomJ = request.POST.get("name", "")
+    prenomJ = request.POST.get("firstName", "")
+
+    newPlID = Player.objects.count() + 1
+    Player(idPlayer= newPlID, name=nomJ, firstName=prenomJ).save()
+
+    request.session['name'] = nomJ
+    request.session['firstName'] = prenomJ
+    request.session['idPlayer'] = newPlID
+
+    return redirect("login:connections")
