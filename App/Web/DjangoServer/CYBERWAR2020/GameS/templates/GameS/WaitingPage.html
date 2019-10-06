@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CYBERWAR2020</title>
+    </head>
+
+    <body>
+      <h1>En attente du joueur adverse.. {{request.session.actif}}</h1>
+
+      <!-- generate form with js and event triggered when response from server received -->
+      {% if request.session.actif %}
+        <form method = 'post' action="{% url 'GameS:towaitingp' %}">
+          {% csrf_token %}
+          <p>
+          <input type="submit" value="Passer l'attente (dev)" />
+          </p>
+        </form>
+
+      {% else %}
+        <form method = 'post' action="{% url 'GameS:toactifp' %}">
+          {% csrf_token %}
+          <p>
+          <input type="submit" value="Passer l'attente (dev)" />
+          </p>
+        </form>
+      {% endif %}
+    </body>
+</html>
