@@ -12,7 +12,7 @@
         Etes vous sûr de vouloir creer un nouvel ID à {{name}} {{firstName}}?
       </p>
 
-      <form action="{% url 'GameS:confirmnewid' %}" method= "post">
+      <form action="{% url 'login:confirmnewid' %}" method= "post">
         {% csrf_token %}
         <input type="hidden" id="name" name="name" value= {{name}}>
         <input type="hidden" id="firstName" name="firstName" value= {{firstName}}>
