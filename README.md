@@ -16,6 +16,8 @@ Développer une application web pour guider les joueurs, indiquer les règles de
 
 * If you looking for something to develop/solve, ctrl+f your name in files.
 
+* Use 'inspect' tool in the browser and go to "tablet" mode, you can check the display of the phone of your choice!
+
 ## IMPORTANT UPDATES
 * Django server in dir 'Web' parametrized and ready to use! PULL GIT ASAP (ask Ben for more info)
 
