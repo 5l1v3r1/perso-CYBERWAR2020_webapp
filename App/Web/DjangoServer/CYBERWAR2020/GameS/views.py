@@ -55,10 +55,16 @@ def confirmnewid(request):
     return redirect("GameS:connections")
 
 def toactifp(request):
+    request.session['actif'] = 1
     return render(request, 'GameS/ActifPlayer.html')
 
+def towaitingp(request):
+    request.session['actif'] = 0
+    return render(request, 'GameS/WaitingPlayer.html')
+
 #(QUENTIN)
-#def processturn(request):
+def processturn(request):
     #Retrieve data from turn form received
         # DATA RECEIVED: Carte choisie, Carte défaussée, carte remise, carte(s) jouée(s) et nouveau CD
     #And push them into DB
+    return render(request, 'GameS/WaitingPage.html')

@@ -10,6 +10,7 @@ urlpatterns = [
     path('confirmnewid', views.confirmnewid, name = 'confirmnewid'),
 
     path('toactifp', views.toactifp, name = 'toactifp'),
-    #path('processturn', views.processturn, name = 'processturn')
+    path('processturn', views.processturn, name = 'processturn'),
+    path('towaitingp', views.towaitingp, name='towaitingp')
 
 ]
