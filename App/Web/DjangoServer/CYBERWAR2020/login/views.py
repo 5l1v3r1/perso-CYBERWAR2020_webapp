@@ -6,14 +6,15 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from django.http import HttpResponse
-from .models import Player
 from django.shortcuts import redirect
+
+from saloon.models import Player
 
 
 def index(request):
     # flush cookies and sess vars from last connected
     request.session.flush()
-    return render(request, 'login/login.html')
+    return render(request, 'login/Login.html')
 
 
 def connections(request):
@@ -35,7 +36,7 @@ def connections(request):
         request.session['firstName'] = prenomJ
         request.session['idPlayer'] = id
 
-        return render(request, 'login/Connected.html')
+        return render(request, 'saloon/Connected.html')
 
     #if not, return a page to confirm creation new IDplayer. change to JS?
     else:

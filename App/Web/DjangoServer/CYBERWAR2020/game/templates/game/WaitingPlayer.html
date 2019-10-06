@@ -7,7 +7,7 @@
 
     <body>
       <h1>NOT YOUR TURN BASTARD!</h1>
-      <form action="{% url 'GameS:processturn' %}" method="post">
+      <form action="{% url 'game:processturn' %}" method="post">
         {% csrf_token %}
         <input type="submit" value="Passez au tour suivant!">
       </form>

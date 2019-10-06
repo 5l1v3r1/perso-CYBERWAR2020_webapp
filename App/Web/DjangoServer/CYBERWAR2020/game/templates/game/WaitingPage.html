@@ -10,7 +10,7 @@
 
       <!-- generate form with js and event triggered when response from server received -->
       {% if request.session.actif %}
-        <form method = 'post' action="{% url 'GameS:towaitingp' %}">
+        <form method = 'post' action="{% url 'game:towaitingp' %}">
           {% csrf_token %}
           <p>
           <input type="submit" value="Passer l'attente (dev)" />
@@ -18,7 +18,7 @@
         </form>
 
       {% else %}
-        <form method = 'post' action="{% url 'GameS:toactifp' %}">
+        <form method = 'post' action="{% url 'game:toactifp' %}">
           {% csrf_token %}
           <p>
           <input type="submit" value="Passer l'attente (dev)" />

@@ -7,7 +7,7 @@
 
     <body>
       <h1>Tour de jeu:</h1>
-      <form action ="{% url 'GameS:processturn' %}" method="post">
+      <form action ="{% url 'game:processturn' %}" method="post">
       {% csrf_token %}
         <h2>Pioche</h2>
           <h3>Carte choisie</h3>
