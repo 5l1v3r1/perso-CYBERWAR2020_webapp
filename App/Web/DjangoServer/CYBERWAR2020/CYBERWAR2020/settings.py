@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'saloon.apps.SaloonConfig',
     'game.apps.GameConfig',
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,7 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'CYBERWAR2020.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -124,3 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "game/static")
+
+]

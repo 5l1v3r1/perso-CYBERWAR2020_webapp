@@ -1,0 +1,36 @@
+<script>
+var CD = Array(5);
+
+for(var i = 0; i < 5; i++){
+  //create 5 CD
+  CD[i] = document.createElement("img");
+
+  CD[i].id = "CD".concat(i)
+  CD[i].src = "{% static 'game/img/NotBuildCD.png' %}";
+  CD[i].alt = "NotBuildCD";
+  CD[i].style.display = "block";
+  CD[i].height = 150;
+  CD[i].width = 150;
+
+  var rowCD = document.getElementById("anchorRowCD");
+  document.getElementById("rowCD").insertBefore(CD[i], rowCD);
+
+  //add event click on each to loop btw states
+  CD[i].addEventListener('click', function(e){
+    switch (e.target.alt) {
+      case "NotBuildCD":
+        e.target.alt = "BuildCD";
+        e.target.src = "{% static 'game/img/BuildCD.png' %}";
+        break;
+      case "BuildCD":
+        e.target.alt = "NotBuildCD";
+        e.target.src = "{% static 'game/img/NotBuildCD.png' %}";
+        break;
+
+    }
+  });
+
+  var states = document.createElement("span");
+
+}
+</script>
