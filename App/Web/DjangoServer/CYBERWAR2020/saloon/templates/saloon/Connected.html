@@ -7,13 +7,6 @@
     </head>
 
     <body>
-      <header>
-
-        <p>
-          {% csrf_token %}
-          #{{request.session.idPlayer}} {{request.session.name}} {{request.session.firstName}}
-        </p>
-      </header>
 
       <h1> Parties en cours </h1>
         <a href="/game/toactifp">Fictive game: actif player</a>

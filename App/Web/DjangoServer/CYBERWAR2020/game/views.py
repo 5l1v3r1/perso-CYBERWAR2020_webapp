@@ -1,7 +1,8 @@
 from django.shortcuts import render
-
-from django.http import HttpResponse
 from django.shortcuts import redirect
+
+from django.urls import include
+from django.http import HttpResponse
 from django.template import loader
 
 from saloon.models import Player
@@ -22,11 +23,15 @@ def towaitingp(request):
     return render(request, 'game/WaitingPlayer.html', {"nb":nb})
 
 #(QUENTIN)
-def processturn(request):
+def processactif(request):
     #Retrieve data from turn form received
         # DATA RECEIVED: Carte choisie, Carte défaussée, carte remise, carte(s) jouée(s) et nouveau CD
     #And push them into DB
     return render(request, 'game/WaitingPage.html')
 
-def serveImg(request):
-    return
+#(QUENTIN)
+def processwaiting(request):
+    #Retrieve data from turn form received
+        # DATA RECEIVED: Carte choisie, Carte défaussée, carte remise, carte(s) jouée(s) et nouveau CD
+    #And push them into DB
+    return render(request, 'game/WaitingPage.html')

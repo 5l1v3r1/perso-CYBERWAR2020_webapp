@@ -1,0 +1,14 @@
+body{
+  margin: 0px 0px 0px 0px;
+
+}
+
+#myHeader .open{
+  height: 10%;
+  background-color: grey;
+}
+
+#myHeader .closed{
+  height: 5%;
+  background-color: grey;
+}

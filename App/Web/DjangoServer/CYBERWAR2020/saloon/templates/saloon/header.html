@@ -1,0 +1,8 @@
+{% load static %}
+
+<header id="myHeader" class="closed">
+  {% csrf_token %}
+  #{{request.session.idPlayer}} {{request.session.name}} {{request.session.firstName}}
+</header>
+
+<script src="{% static 'saloon/js/header.js' %}"> </script>

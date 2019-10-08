@@ -7,7 +7,8 @@ urlpatterns = [
     path('', views.index, name='index'),
 
     path('toactifp', views.toactifp, name = 'toactifp'),
-    path('processturn', views.processturn, name = 'processturn'),
-    path('towaitingp', views.towaitingp, name='towaitingp')
+    path('processactif', views.processactif, name = 'processactif'),
+    path('towaitingp', views.towaitingp, name='towaitingp'),
+    path('processwaiting', views.processwaiting, name = 'processwaiting')
 
 ]

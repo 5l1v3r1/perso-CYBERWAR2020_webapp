@@ -5,30 +5,67 @@
     <head>
         <meta charset="utf-8" />
         <title>CYBERWAR2020</title>
-        <link rel="stylesheet" href="{% static 'game/WaitingPlayer.css' %}">
+        <link rel="stylesheet" href="{% static 'game/css/WaitingPlayer.css' %}">
         <link rel="stylesheet" href="{% static 'css/background.css' %}">
+        <link rel="stylesheet" href="{% static 'saloon/css/header.css' %}">
+
     </head>
 
     <body>
+      {% include 'saloon/header.html' %}
+
       <h1>TOUR ADVERSE..</h1>
 
       <h2>Etat de votre terrain</h2>
-
-      <span>
-        {% for i in nb %}
-          <h3>Centre n°{{i}}</h3>
-          <p>
-            <img class="centres" id="CD{{i}}" alt="NotBuildCD" src="{% static 'game/img/NotBuildCD.png' %}"/>
-            <div>Verrous</div>
-            <div>Hors Service</div>
-          </p>
-        {% endfor %}
-
-      </span>
-
-      <form action="{% url 'game:processturn' %}" method="post">
+      <form method="post" action= "{% url 'game:processwaiting' %}">
         {% csrf_token %}
-        <input type="submit" value="Passez au tour suivant!">
+          {% for i in nb %}
+            <h3>Centre n°{{i}}</h3>
+            <p>
+              <img class="centres" id="CD{{i}}" alt="NotBuildCD" src="{% static 'game/img/NotBuildCD.png' %}"/>
+
+              <div class="centerIn">
+              <label for="Verrous{{i}}">Verrous: </label>
+              <input type="number" name="Verrous{{i}}" min="1" max="8" value="2"><br>
+              </div>
+
+              <div class="centerIn">
+              <label for="BN{{i}}">BotNet: </label>
+              <input type="number" name="BN{{i}}" min="0" max="4" value="0"><br>
+              </div>
+
+              <div class="centerIn">
+              <label for="BB{{i}}">Bug Bounty: </label>
+              <input type="number" name="BB{{i}}" min="0" max="4" value="0"><br>
+              </div>
+
+              <div class="centerIn">
+              <label for="DDOS{{i}}">DOS to DDOS: </label>
+              <input type="number" name="DDOS{{i}}" min="0" max="1" value="0"><br>
+              </div>
+              <br>
+
+              <div class="centerIn">
+              <label for="HS{{i}}">Hors Service: </label>
+              <input type="radio" name="HS{{i}}" value="1">Oui
+              <input type="radio" name="HS{{i}}" value="0" checked>Non<br>
+              </div>
+
+              <div class="centerIn">
+              <label for="Fished{{i}}">Fished: </label>
+              <input type="radio" name="Fished{{i}}" value="1">Oui
+              <input type="radio" name="Fished{{i}}" value="0" checked>Non<br>
+              </div>
+
+              <div class="centerIn">
+              <label for="Wormed{{i}}">Wormed: </label>
+              <input type="radio" name="Wormed{{i}}" value="1">Oui
+              <input type="radio" name="Wormed{{i}}" value="0" checked>Non<br>
+              </div>
+
+            </p>
+          {% endfor %}
+          <input type="submit" value="Passez au tour suivant!">
       </form>
 
       <script>
@@ -36,7 +73,9 @@
         var srcNotBuildCD = "{% static 'game/img/NotBuildCD.png' %}";
         var srcDestroyedCD = "{% static 'game/img/DestroyedCD.png' %}";
       </script>
-      <script src="{% static 'game/WaitingPlayer.js' %}"> </script>
+
+      <script src="{% static 'game/js/WaitingPlayer.js' %}"> </script>
+
     </body>
 
 </html>
